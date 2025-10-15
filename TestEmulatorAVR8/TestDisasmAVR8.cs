@@ -41,7 +41,7 @@ namespace TestEmulatorAVR8
         {
             byte[] binBuf = new byte[ALL_OPCODES_WORD_SIZE * 2];
             int offset = 0;
-            for (uint op = 0; op <= TOTAL_OPCODES_NB; op++) {
+            for (uint op = 0; op < TOTAL_OPCODES_NB; op++) {
                 byte[] bv = BitConverter.GetBytes((ushort)op);
                 Array.Copy(bv, 0, binBuf, offset, 2);
                 offset += 2;

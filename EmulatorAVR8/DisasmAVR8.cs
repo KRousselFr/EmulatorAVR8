@@ -569,12 +569,12 @@ namespace EmulatorAVR8
                             break;
                         case 0x1:
                             /* ST Z+, Rr */
-                            mnemo = "LD";
+                            mnemo = "ST";
                             args = String.Format("Z+, R{0}", rr);
                             break;
                         case 0x2:
                             /* ST -Z, Rr */
-                            mnemo = "LD";
+                            mnemo = "ST";
                             args = String.Format("-Z, R{0}", rr);
                             break;
                         case 0x4:
@@ -952,28 +952,28 @@ namespace EmulatorAVR8
                     /* BRBS s, k */
                     switch (bNum) {
                         case 0:
-                            /* BRCS k */
+                            /* BRCS k / BRLO k */
                             mnemo = "BRCS";
                             break;
                         case 1:
-                            /* BRLO k */
-                            mnemo = "BRLO";
-                            break;
-                        case 2:
                             /* BREQ k */
                             mnemo = "BREQ";
                             break;
-                        case 3:
+                        case 2:
                             /* BRMI k */
                             mnemo = "BRMI";
                             break;
-                        case 4:
+                        case 3:
                             /* BRVS k */
                             mnemo = "BRVS";
                             break;
-                        case 5:
+                        case 4:
                             /* BRLT k */
                             mnemo = "BRLT";
+                            break;
+                        case 5:
+                            /* BRHS k */
+                            mnemo = "BRHS";
                             break;
                         case 6:
                             /* BRTS k */
@@ -991,28 +991,28 @@ namespace EmulatorAVR8
                     /* BRBC s, k */
                     switch (bNum) {
                         case 0:
-                            /* BRCC k */
+                            /* BRCC k / BRSH k */
                             mnemo = "BRCC";
                             break;
                         case 1:
-                            /* BRSH k */
-                            mnemo = "BRSH";
-                            break;
-                        case 2:
                             /* BRNE k */
                             mnemo = "BRNE";
                             break;
-                        case 3:
+                        case 2:
                             /* BRPL k */
                             mnemo = "BRPL";
                             break;
-                        case 4:
+                        case 3:
                             /* BRVC k */
                             mnemo = "BRVC";
                             break;
-                        case 5:
+                        case 4:
                             /* BRGE k */
                             mnemo = "BRGE";
+                            break;
+                        case 5:
+                            /* BRHC k */
+                            mnemo = "BRHC";
                             break;
                         case 6:
                             /* BRTC k */

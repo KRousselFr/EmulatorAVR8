@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddressUnreadableException.cs" />
+    <Compile Include="AddressUnwritableException.cs" />
+    <Compile Include="BreakInterrupt.cs" />
     <Compile Include="CPUAVR8.cs" />
     <Compile Include="DisasmAVR8.cs" />
     <Compile Include="IMemorySpaceAVR8.cs" />

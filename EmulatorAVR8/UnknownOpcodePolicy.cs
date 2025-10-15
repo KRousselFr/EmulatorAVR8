@@ -11,10 +11,9 @@
 
         /// Lancer une UnknownOpcodeException.
         ThrowException,
-
-        /// Tenter d'émuler le comportement du processeur physique.
-        Emulate
-
     }
 
 }
+
+
+
