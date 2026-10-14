@@ -1,0 +1,9 @@
+*.suo
+*.csproj.user
+bin/
+obj/
+.DS_Store
+.vs/
+.hg/
+packages/
+TestResults/
